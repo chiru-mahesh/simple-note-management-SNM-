@@ -1,0 +1,51 @@
+{% extends 'dashboard.html' %}
+{% block addcss %}<link rel="stylesheet" href="{{url_for('static',filename='addnotes.css')}}">{% endblock %}
+{% block content %}
+
+<div class="add-notes-container">
+
+    <div class="form-card">
+
+        <h2>Add New Note</h2>
+        <p class="subtitle">Create and save your notes easily.</p>
+
+        <form  method="post">
+
+            <div class="form-group">
+                <label for="title">Note Title</label>
+                <input
+                    type="text"
+                    id="title"
+                    name="title"
+                    placeholder="Enter note title"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea
+                    id="description"
+                    name="description"
+                    rows="8"
+                    placeholder="Write your note here..."
+                    required
+                ></textarea>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="save-btn">
+                    Save Note
+                </button>
+
+                <button type="reset" class="clear-btn">
+                    Clear
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+{% endblock %}

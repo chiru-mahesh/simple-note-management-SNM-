@@ -1,0 +1,38 @@
+{% extends 'dashboard.html' %}
+{% block addcss %}<link rel="stylesheet" href="{{url_for('static',filename='addnotes.css')}}">{% endblock %}
+{% block content %}
+
+<div class="add-notes-container">
+
+    <div class="form-card">
+
+        <h2>upload file</h2>
+        <p class="subtitle">Create and save your file easily.</p>
+
+        <form  method="post" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label for="title">upload file</label>
+                <input
+                    type="file"
+                    id="title"
+                    name="file"
+                    required
+                >
+            </div>
+
+            
+
+            <div class="button-group">
+                <button type="submit" class="save-btn">
+                    upload
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+{% endblock %}
