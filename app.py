@@ -8,7 +8,7 @@ from mysql.connector import (connection)
 import re
 
 
-mydb=connection.MySQLConnection(user='root',password='Admin@23',host='localhost',database='snm29db')
+mydb=connection.MySQLConnection(user='flaskuser',password='password',host='localhost',database='flaskdb')
 import flask_excel as excel
 app = Flask(__name__)
 app.config['SESSION_TYPE']='filesystem'
@@ -469,4 +469,4 @@ def newpassword(data):
     
    
 if __name__ == '__main__':
-    app.run(debug=True, use_reloader=True)
+    app.run()
